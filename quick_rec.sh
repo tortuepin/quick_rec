@@ -15,6 +15,12 @@ do
   esac
 done
 
+# セーブするディレクトリがなかったら終了
+if [ -e $SAVE_DIR ]; then
+    echo $SAVE_DIR "does not exist"
+    exit 1
+fi
+
 ## 練習の名前を受け取る
 shift `expr $OPTIND - 1`
 
