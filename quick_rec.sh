@@ -74,10 +74,10 @@ function __del () {
 function start () {
     echo "Type <Enter> to start recording"
     while read LINE; do
-        if [ $LINE = 'r' ]; then
+        if [ "$LINE" = 'r' ]; then
             __start_play
             echo "Done play" $REC_FILE
-        elif [ $LINE = 'd' ]; then
+        elif [ "$LINE" = 'd' ]; then
             __del
         else
             __start_rec
