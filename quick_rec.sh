@@ -16,7 +16,7 @@ do
 done
 
 # セーブするディレクトリがなかったら終了
-if [ -e $SAVE_DIR ]; then
+if [ ! -d $SAVE_DIR ]; then
     echo $SAVE_DIR "does not exist"
     exit 1
 fi
